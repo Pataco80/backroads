@@ -25,7 +25,7 @@ export const setTheme = {
 
 // Fonts Palette
 export const setFont = {
-  main: `font-family: 'Quicksand', sans-serif`,
+  main: `font-family: 'Lato', sans-serif`,
   heading: `font-family: 'Poppins', sans-serif`
 }
 
