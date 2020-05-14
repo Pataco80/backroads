@@ -1,10 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
 import { setColor, setFont, setPxToRem, setLetterSpacing } from '../styles/helpers'
 
 const GlobalStyles = createGlobalStyle`
-${reset}
+
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 body {
   ${setFont.main};
   color: ${setColor.mainBlack};
