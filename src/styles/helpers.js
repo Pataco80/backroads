@@ -30,10 +30,10 @@ export const setFont = {
 }
 
 export const media = generateMedia({
-  mobile: setPxToRem(250),
-  smTablet: setPxToRem(580),
-  tablet: setPxToRem(768),
-  desktop: setPxToRem(1200),
+  mobile: '15rem',
+  smTablet: '36rem',
+  tablet: '48rem',
+  desktop: '75rem',
 });
 
 // Unitie's Calc Functions
