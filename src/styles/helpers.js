@@ -1,6 +1,6 @@
 // import { css } from 'styled-components'
 //import { rgba } from 'polished'
-
+import { generateMedia } from 'styled-media-query'
 // Colors Palette
 export const setColor = {
   primaryColor: '#3fd0d4',
@@ -29,26 +29,12 @@ export const setFont = {
   heading: `font-family: 'Poppins', sans-serif`
 }
 
-// If not use styled-queries, discoment this function media
-/*
-// Media Queries map sizes
-const sizes = {
-  large: 1200,
-  desktop: 1024,
-  tablet: 768,
-  phone: 576,
-}
-
-// Iterate through the sizes and create a media template
-export const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label] / 16}rem) {
-      ${css(...args)}
-    }
-  `
-  return acc
-}, {})
-*/
+export const media = generateMedia({
+  mobile: setPxToRem(250),
+  smTablet: setPxToRem(580),
+  tablet: setPxToRem(768),
+  desktop: setPxToRem(1200),
+});
 
 // Unitie's Calc Functions
 export const setPxToRem = (px = 16) => {
