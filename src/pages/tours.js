@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from '../components/Globals/Layout/Layout'
 
 const tours = () => {
   return (
-    <div>
+    <Layout>
       Hello Tours Page !!!
-    </div>
+    </Layout>
   )
 }
 
