@@ -33,6 +33,7 @@ export const media = generateMedia({
   mobile: '15rem',
   smTablet: '36rem',
   tablet: '48rem',
+  lgTablet: '62rem',
   desktop: '75rem',
 });
 
@@ -42,12 +43,12 @@ export const setPxToRem = (px = 16) => {
 }
 
 // Layout's Functions
-export const layout = (px = 1170) => {
+export const layout = ({mW = 1170, pdX = 8, pdY = 0} = {}) => {
   return `
     display:block;
-    max-width:${setPxToRem(px)};
+    max-width:${setPxToRem(mW)};
     margin: 0 auto;
-    padding: 0 ${setPxToRem(8)};`
+    padding: ${setPxToRem(pdY)} ${setPxToRem(pdX)};`
 }
 
 
