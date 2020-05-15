@@ -1,3 +1,4 @@
+import React from 'react'
 import { FacebookWithCircle, TwitterWithCircle, LinkedinWithCircle } from '@styled-icons/entypo-social'
 
 export default [
