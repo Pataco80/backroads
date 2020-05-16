@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import { media, layout, setFlex, setPxToRem, setColor, setTransition, setLetterSpacing } from '../../../styles/helpers'
+import { setFlex, setPxToRem, setColor, setTransition, setLetterSpacing } from '../../../styles/helpers'
 
 export const FooterWrapper = styled.footer`
   ${setFlex({flDir:'column',x:'center'})};
