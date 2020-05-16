@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from '../components/Globals/Layout/Layout'
-import Hero from '../components/Hero/Hero'
+import Hero from '../components/Hero'
 import Banner from '../components/Banner/Banner'
 import {GatsbyLink} from '../components/Button'
 export default () => (

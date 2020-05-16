@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
 import BackgroundImage from 'gatsby-background-image'
-import * as S from './HeroStyled'
 
+import styled from 'styled-components'
 const getBcgImage = graphql`
   {
       heroBcg:file(relativePath: {eq: "defaultBcg.jpeg"}) {
@@ -16,15 +16,24 @@ const getBcgImage = graphql`
     }
 `
 
-const Hero = ({children}) => {
+const Hero = ({children,className}) => {
   const heroImage = useStaticQuery(getBcgImage)
   return (
-    <S.HeroWrapper>
+    <header className={className}>
       <BackgroundImage bcgImage className="bcgImage" fluid={heroImage.heroBcg.childImageSharp.fluid}>
         {children}
       </BackgroundImage>
-    </S.HeroWrapper>
+    </header>
   )
 }
 
-export default Hero
+export default styled(Hero)`
+.bcgImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 54px);
+    background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7));
+    opacity: 1 !important;
+  }
+`
