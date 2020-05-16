@@ -2,16 +2,18 @@ import styled, {css} from 'styled-components'
 import { Link } from 'gatsby'
 import { darken } from 'polished'
 
-import { setLetterSpacing, setColor, setBorder, setTransition } from '../styles/helpers'
+import { setLetterSpacing, setColor, setBorder, setTransition, setPxToRem } from '../styles/helpers'
 
 const ButtonStyles = css`
-text-transform: uppercase;
+  text-transform: uppercase;
   text-decoration: none;
   ${setLetterSpacing()};
-  padding: 0.9rem 1.6rem;
+  padding: ${setPxToRem(14)} ${setPxToRem(26)};
   display: inline-block;
   ${setTransition()};
   cursor: pointer;
+  background:none;
+
   
   ${({ primary }) => primary && `
     color: ${setColor.mainWhite};
@@ -26,7 +28,6 @@ text-transform: uppercase;
 
   ${({ outline }) => outline && `
     color: ${setColor.mainWhite};
-    background:none;
     border: ${setBorder({size:2,color:setColor.mainWhite})};
   `}
 
