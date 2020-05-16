@@ -26,9 +26,9 @@ export default styled(Title)`
       display:inline-block;
       margin: 0 ${setPxToRem(5)};
     `}
-  }
 
-  span:last-child {
+    &:last-child {
       color:${setColor.mainBlack};
     }
+  }
 `
