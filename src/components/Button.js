@@ -10,7 +10,7 @@ text-transform: uppercase;
   ${setLetterSpacing()};
   padding: 0.9rem 1.6rem;
   display: inline-block;
-  transition: ${setTransition()};
+  ${setTransition()};
   cursor: pointer;
   
   ${({ primary }) => primary && `
