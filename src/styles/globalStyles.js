@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration:none;
 }
+p {
+  margin-bottom: ${setPxToRem(20)};
+}
 `
 
 export default GlobalStyles
